@@ -1,0 +1,107 @@
+:root {
+      --blanco: #ffffff;
+      --oscuro: #212121;
+      --primario: #FFC107;
+      --secundario: #0097A7;
+      --gris: #757575;
+      --grisClaro: #DFE9F3;
+      --azul:#5410f3f3;
+}   
+/*  Globales **/
+html {
+      font-size: 62.5%;
+      box-sizing: border-box; /* Hack para Box Model **/
+      scroll-snap-type: y mandatory;
+}
+body {
+      font-size: 16px; /* 1rem = 10px */
+      font-family: 'Krub', sans-serif;
+      background-image: linear-gradient(to top, var(--grisClaro) 0%, var(--blanco) 100% );
+}
+.navegacion-principal,
+.formulario { 
+      scroll-snap-align: center;
+      scroll-snap-stop: always;
+}
+*, *:before, *:after {
+      box-sizing: inherit;
+}
+.contenedor {
+      max-width: 120rem;
+      margin: 0 auto;
+}
+/** Utilidades **/
+.w-sm-100 {
+      width: 100%;
+} 
+@media (min-width: 768px) {
+     .w-sm-100 {
+           width: auto;
+    }
+}
+.flex {
+      display: flex;
+}
+.alinear-derecha {
+      justify-content: flex-end;
+}
+/* donde esta el logo */
+.header__logo{
+      margin: 0rem 0;
+      width: 6rem;
+      height: 4rem;
+}
+/* Navegacion Principal */
+.nav-bg {
+      background-color: var(--secundario);
+}
+.navegacion-principal {
+      display: flex;
+      flex-direction: column;
+}
+@media (min-width: 768px) {
+    .navegacion-principal  {
+           flex-direction: row;
+           justify-content: space-between;
+           color: var(--primario);
+     }
+}
+.navegacion-principal a {
+      display: block;
+      text-align: center;
+      color: var(--blanco);
+      text-decoration: none;
+      font-size: 2rem;
+      font-weight: 700;
+      padding: 1rem;
+}
+@media (max-width: 768px) {
+     .navegacion-principal a {
+           font-size: 1.5rem;
+           padding: 0.5rem;
+     }
+}        
+.navegacion-principal a:hover {
+      background-color: var(--primario);
+      color: var(--oscuro);
+}
+/* imagen de todas las webs*/
+.rilo {
+      background-image: url(../img/monumento.webp);
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 500px;
+      position: relative;
+      margin-bottom: 2rem;
+}
+@media (max-width: 768px) {    
+     .rilo {
+           height: 400px;
+     }
+} 
+/** pie de paginas **/
+.pie-pagina {
+      text-align: center;
+      color:var(--azul);
+}
+

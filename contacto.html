@@ -1,0 +1,69 @@
+ <!DOCTYPE html>
+ <html lang="es">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="shortcut icon" href="img/logo_p1.ico">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta NAME="Title" CONTENT="desarrollos front-end">
+     <meta NAME="keywords" CONTENT="ROSARIO, rosario, Argentina, argentina , ">
+     <meta NAME="Description" CONTENT="desarrollos front-en">
+     <meta property ="og:url" content="https://easi.com.ar">
+     <meta property ="og:title" content="disarrollos front-end">
+     <link rel="stylesheet" href="css/normalize.css">
+     <link rel="stylesheet" href="css/styles.css">
+     <link rel="stylesheet" href="css/conta.css">
+     <title>contacto</title>
+ </head>
+ <body>
+ <!--Archivo styles.css-->
+     <div class="hea_mues"> 
+         <img class="header__logo" src="img/logo.gif" alt="Logotipo">
+     </div >
+     <div class="nav-bg">
+         <nav class="navegacion-principal contenedor">
+             <a href="index.html">Inicio</a>
+             <a href="curri.html">Curriculun Vitae</a>
+             <a href="contacto.html">Contacto</a>
+             <a href="llegar.html">Como llegar</a>
+         </nav>
+     </div>
+     <!--Archivo conta.css-->
+     <div class="rilo-contacto">
+         <div class="contenido-rilo-contacto">
+             <form class="formulario" ACTION="./formu/formu.php" method="get" enctype="TEXT/PLAIN">
+                 <div class="rilos" >Complete el formulario para contactarnos</div>
+                     <fieldset>
+                         <div class="campo"><label> (*) datos obligatorios </label></div> 
+                         <p></p>
+                         <div class="contenedor-campos">
+                             <div class="campo">
+                                 <label>(*) Nombre</label>                            
+                                 <input class="input-text" type="text" name="nombre" required placeholder="Tu Nombre">
+                                 </div>
+                                 <div class="campo">
+                                 <label> (*) Teléfono</label>
+                                 <input class="input-text" type="tel" name="telefono" required placeholder="Tu Teléfono">
+                             </div>
+                             <div class="campo">
+                                 <label> (*) Correo</label>
+                                 <input class="input-text" type="email" name="email" required placeholder="Tu Email">
+                                 </div>
+                             <div class="campo">
+                                 <label for="mensaje">Mensaje</label>
+                                 <textarea class="input-text-area"  name="mensaje" ></textarea>
+                             </div> 
+                         </div>
+                     </fieldset> 
+                     <div class="alinear-derecha flex">
+                         <input class="boton w-sm-100" type="submit" value="Enviar">
+                     </div> 
+             </form> 
+         </div>    
+     </div>
+     <!--Archivo styles.css-->
+     <footer class="pie-pagina">
+        <p>Todos los derechos reservados</p>
+     </footer>
+ </body>
+ </html>

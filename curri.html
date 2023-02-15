@@ -1,0 +1,73 @@
+ <!DOCTYPE html>
+ <html lang="es">
+ <head>
+    <meta charset="UTF-8">
+     <!--<meta http-equiv="cache-control" content="no-cache" /> -->
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="shortcut icon" href="img/logo_p1.ico">
+     <meta NAME="Title" CONTENT="desarrollos front-end">
+     <meta NAME="keywords" CONTENT="ROSARIO, rosario, Argentina, argentina , ">
+     <meta NAME="Description" CONTENT="desarrollos front-en">
+     <meta property ="og:url" content="https://easi.com.ar">
+     <meta property ="og:title" content="disarrollos front-end">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Alegreya&family=Sofia+Sans+Semi+Condensed:wght@100&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="css/normalize.css"> 
+     <link rel="stylesheet" href="css/styles.css">
+     <link rel="stylesheet" href="css/curri.css"> 
+     <title>CV</title>
+ </head>
+ <body onload=datos()>
+     <script>
+         const persona ='{"nombre":"Lorences Ricardo" , "edad":"65 años", "nacionalidad":"Argentino", "domicilio":"1ro de Mayo 1534"}';
+         const obj= JSON.parse(persona);
+         function datos(){
+             document.getElementById("nombre").innerHTML="Apellido y Nombres: "+obj.nombre;
+             document.getElementById("edad").innerHTML="Edad: "+obj.edad;
+             document.getElementById("nacionalidad").innerHTML="Nacionalidad: "+obj.nacionalidad;
+             document.getElementById("domicilio").innerHTML="Domicilio: "+obj.domicilio;
+         }
+         function boton(){
+             URL="./cv/cv.pdf";
+             window.open(URL,'rilo_cv');   // en otra pesta�a
+         }
+     </script>
+     <!--Archivo styles.css-->
+     <div class="hea_mues"> 
+        <img class="header__logo" src="img/logo.gif" alt="Logotipo">
+     </div >
+     <div class="nav-bg">
+             <nav class="navegacion-principal contenedor">
+                 <a href="index.html">Inicio</a>
+                 <a href="curri.html">Curriculun Vitae</a>
+                 <a href="contacto.html">Contacto</a>
+                 <a href="llegar.html">Como llegar</a>
+             </nav>
+     </div>
+     <!--en archivo curri.css-->   
+     <div class="contenedor_cv">   
+         <div class="grid_cv">    
+             <div class="arriba_cv"></div>
+             <div class="latiz_cv"></div>
+             <div class="centro_cv">
+                 <div id="nombre"></div>
+                 <div id="edad"></div>
+                 <div id="nacionalidad"></div>
+                 <div id="domicilio"></div>
+             </div>
+             <div class="latder_cv">
+                 <!--<button class="btn-cv" onclick="boton()"></button> -->
+                 <!-- otra forma -->
+                 <img src="img/foto1.jpg" width=90 height=110 ></a> 
+                 <div>
+                     <input class="btn-cv1" onclick="boton()"   type="submit" value="Ver cv">
+                 </div>
+             </div>
+         </div>
+     </div>  
+     <!--Archivo styles.css-->
+     <footer class="pie-pagina">
+         <p>Todos los derechos reservados</p>
+     </footer>
+ </body>
+ </html>

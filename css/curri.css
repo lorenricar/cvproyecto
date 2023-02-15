@@ -1,0 +1,103 @@
+.arriba_cv {
+     grid-area: arriba_cv;
+}
+.latiz_cv {
+     grid-area: latiz_cv;
+}
+.centro_cv {
+     grid-area: centro_cv;
+}
+.latder_cv {
+     grid-area: latder_cv;
+     color: #000;
+}
+.abajo_cv {
+     grid-area: abajo_cv;
+}
+.grid_cv {
+     background-color: rgba( 0,0,0, .7 ); /** Anterior **/
+     background-color: rgb( 0 0 0 / 50% );  
+     height:100%;
+     margin: 0%;
+     display: grid;
+     grid-gap: 0.5rem;
+     grid-template-columns: 1fr 5fr 1fr;
+     grid-template-rows: 1fr 10fr 1fr;
+     grid-template-areas:
+         "arriba_cv arriba_cv arriba_cv"
+         "latiz_cv centro_cv latder_cv"
+         "abajo_cv abajo_cv abajo_cv"
+}
+@media only screen and (max-width: 768px) {
+    .grid_cv {
+         height: 400px;
+         margin: 0%;
+         display: grid;
+         grid-gap: 0.5rem;
+         grid-template-columns: 100%;
+         grid-template-areas: 
+            "centro_cv"
+            "latder_cv"
+    }
+}
+.contenedor_cv {
+     font-family: 'Sofia',sans-serif;
+     font-size: 20px;
+     color: rgb(248, 252, 252); 
+     background-image: url(../img/monumento.webp);
+     background-repeat: no-repeat;
+     background-size: cover;
+     justify-content: center;
+     height: 500px;
+     position: relative;
+     margin-bottom: 2rem;
+}
+@media  (max-width: 768px){
+    .contenedor_cv {
+         height: 400px;
+         font-size: 15px;
+    }
+}
+.rilo_cv{
+     font-family: 'Sofia',sans-serif;
+     font-size: 20px;
+     color: rgb(248, 252, 252); 
+}
+@media  (max-width: 768px){
+    .rilo_cv {
+         font-size: 15px;
+    }
+}   
+.btn-cv{
+     background-image:url(../img/foto1.jpg);
+     background-repeat:no-repeat;
+     height:110px;
+     width:90px;
+     background-size: 90px 110px;
+     background-position:center;
+}
+.btn-cv:hover {
+     cursor: pointer;
+}
+.btn-cv1 {
+     background-color: var(--secundario);
+     color: var(--blanco);
+     margin-top: 0.5rem;
+     font-size: 2rem;
+     text-decoration: none;
+     text-transform: uppercase;
+     font-weight: bold;
+     border-radius: .5rem;
+     width: auto;
+     text-align: center;
+     border: none;
+}
+@media (max-width: 768px) {
+    .btn-cv1 {
+         font-size: 1.5rem;
+         width: auto;
+    }
+}
+.btn-cv1:hover {
+     cursor: pointer;
+}

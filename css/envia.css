@@ -1,0 +1,89 @@
+.arriba_en {
+      grid-area: arriba_en;
+}
+.latiz_en {
+      grid-area: latiz_en;
+}
+.centro_en {
+      grid-area: centro_en;
+}
+.latder_en {
+      grid-area: latder_en;
+      color: #000;
+}
+.abajo_en {
+      grid-area: abajo_en;
+}
+.grid_en {
+      background-color: rgba( 0,0,0, .7 ); /** Anterior **/
+      background-color: rgb( 0 0 0 / 50% );  
+      height:100%;
+      margin: 0%;
+      display: grid;
+      text-align: center;
+      grid-gap: 0.5rem;
+      grid-template-columns: 3fr 5fr 3fr;
+      grid-template-rows: 5fr 10fr 1fr;
+      grid-template-areas:
+         "arriba_en arriba_en arriba_en"
+         "latiz_en centro_en latder_en"
+         "abajo_en abajo_en abajo_en"
+}
+@media only screen and (max-width: 768px) {
+      .grid_en {
+           height: 400px;
+           margin: 0%;
+           display: grid;
+           grid-gap: 0.5rem;
+           grid-template-columns: 100%;
+           text-align: center;
+           grid-template-areas: 
+             "latder_en"
+             "centro_en";
+     }
+}
+.contenedor_en {
+      font-family: 'Sofia',sans-serif;
+      font-size: 20px;
+      color: rgb(248, 252, 252); 
+      background-image: url(../img/monumento.webp);
+      background-repeat: no-repeat;
+      background-size: cover;
+      justify-content: center;
+      height: 500px;
+      position: relative;
+      margin-bottom: 2rem;
+}
+@media  (max-width: 768px){
+     .contenedor_en {
+           height: 400px;
+           font-size: 15px;
+     }
+}
+.flex-en {
+      display: flex;
+}
+.alinear-derecha-en {
+      justify-content: flex-end;
+}
+.boton-en {
+      background-color: var(--secundario);
+      color: var(--blanco);
+      padding: 1rem 3rem;
+      margin-top: 3rem;
+      font-size: 2rem;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-weight: bold;
+      border-radius: .5rem;
+      text-align: center;
+      border: none;
+}
+@media (min-width: 768px) {
+    .boton-en {
+           width: auto;
+    }
+}
+.boton-en:hover {
+      cursor: pointer;
+}
